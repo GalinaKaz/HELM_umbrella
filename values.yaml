@@ -1,0 +1,15 @@
+redis:
+  replica:
+  ## @param replica.replicaCount Number of Redis&reg; replicas to deploy
+  ##
+    replicaCount: 2
+
+prometheus-redis-exporter:
+  redis.addr: "redis://localhost:6379"
+
+  serviceMonitor:
+    enabled: true
+    labels:
+      release: try5 
+
+
