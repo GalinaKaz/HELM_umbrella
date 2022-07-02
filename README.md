@@ -46,3 +46,10 @@ this command will create example1 release that can be see with "helm list" comma
 
 **CRITICAL**   :  the RELEASE_NAME must match the serviceMonitor.labels.release for redis exporter section, in order to make sure redis will be monitored by prometheus.
 
+
+**Testing**
+
+make port forwarding to promethues port 9090 to check the access:
+
+$ kubectl port-forward --address 0.0.0.0  service/prometheus-operated 9090
+
